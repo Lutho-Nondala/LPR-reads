@@ -1,0 +1,78 @@
+<!-- <div class="container mt-5">
+    <div class="card" style="padding: 20px;">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <input type="text"
+            ngModel
+            name="userName"
+            id="userName"
+            placeholder="Enter your username"
+            class="form-control mb-3"
+            >
+            <input type="password" 
+            ngModel
+            name="userPassword"
+            id="userPassword"
+            placeholder="Enter your password"
+            class="form-control mb-3"
+            >
+            <input type="submit" value="Login" class="btn btn-outline-primary form-control rounded-0">
+        </form>
+    </div>
+</div> -->
+<section class="bg-image d-flex justify-content-center align-items-center"
+style="
+       background-image: url('https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+       height: 100vh;
+       ">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://th.bing.com/th/id/R.7890d5a3006ac54dab1f733e67ff567e?rik=6e5eEW99qQJNpQ&riu=http%3a%2f%2fangevision.com%2fpic%2fbig%2f271_0.jpg&ehk=Tuj8O1ClK%2bFSBClAbJYIbxgknPcjckIT5OV5yis44A8%3d&risl=&pid=ImgRaw&r=0"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+                <main class="form-signin">        
+                  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+  
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                      <span class="h1 fw-bold mb-0">LPR READS</span>
+                    </div>
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+  
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text"
+                        ngModel
+                        name="userName"
+                        id="userName" 
+                        class="form-control" />
+                        <label for="userName">Username</label>
+                    </div>
+  
+                    <div class="form-outline mb-4" class="form-floating mt-3 mb-3">
+                        <input type="password" 
+                        ngModel
+                        name="userPassword"
+                        id="userPassword" 
+                        class="form-control form-control-lg" />
+                        <label class="form-label" for="userPassword">Password</label>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                      <button type="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+                    </div>
+                  </form>
+                </main>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,87 @@
+<div class="grid-container">
+    <div class="container mt-5" class="grid-item item2">
+        <div class="card" style="padding: 20px;">
+            <h1>Add LPR</h1>
+            <form >
+                <input type="text"
+                ngModel
+                name="vehicle"
+                id="vehicle"
+                placeholder="Enter vehicle ID"
+                class="form-control mb-3"
+                >
+                <input type="time"
+                ngModel
+                name="time"
+                id="time"
+                placeholder="Enter time of reading"
+                class="form-control mb-3"
+                >
+                <input type="text"
+                ngModel
+                name="camera"
+                id="camera"
+                placeholder="Enter camera name"
+                class="form-control mb-3"
+                >
+                <input type="text"
+                ngModel
+                name="location"
+                id="location"
+                placeholder="Enter location of camera"
+                class="form-control mb-3"
+                >
+                <label class="form-label" for="customFile"><h4>Input LPR Image:</h4></label>
+                <input type="file" id="lprImages" multiple #selectFile (change)="onFileSelected($event)"/>
+                <h1> </h1>
+                <input type="submit" value="Delete" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+    </div>
+    <div class="container mt-5" class="grid-item item1">
+        <div class="card" style="padding: 20px;">
+            <h1>Search User By Their User Name</h1>
+            <form >
+                <input type="text"
+                ngModel
+                name="userName"
+                id="userName"
+                placeholder="Enter username"
+                class="form-control mb-3"
+                >
+                <input type="submit" value="Search" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+    </div>
+    <div class="container mt-3" class="grid-item item4">
+        <h2>Searched Entry</h2>            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><h4>Firstname</h4></th>
+              <th><h4>Lastname</h4></th>
+              <th><h4>Role</h4></th>
+              <th><h4>Username</h4></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h6>ddddd</h6></td>
+              <td><h6>aaaaa</h6></td>
+              <td><h6>fffff</h6></td>
+              <td><h6>wwwww</h6></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container mt-5" class="grid-item item4">
+        <div class="card" style="padding: 20px;">
+            <h1>Search By Vehicle Registration</h1>
+        </div>
+    </div>
+    <div class="container mt-5" class="grid-item item5">
+        <div class="card" style="padding: 20px;">
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, debitis quos cumque, ab corrupti doloremque libero at placeat facere officia blanditiis dignissimos. Nesciunt dignissimos ipsam voluptatem quaerat qui alias autem!</h4>
+        </div>
+    </div>
+</div>

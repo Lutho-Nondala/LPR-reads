@@ -1,0 +1,163 @@
+<div class="header">
+    <h1>Vehicle Management</h1>
+    <p>Manage all vehicles in the database by performing CRUD.</p>
+  </div>
+  
+  <div class="topnav">
+    <a href="#"></a>
+  </div>
+  
+  <div class="row">
+    <div class="column">
+        <div class="container mt-5">
+            <div class="card" style="padding: 20px;">
+                <h1>Add Vehicle</h1>
+                <form #saveForm="ngForm" (ngSubmit)="save(saveForm)">
+                    <input type="text"
+                    ngModel
+                    name="numberPlate"
+                    id="numberPlate"
+                    placeholder="Enter vehicle number plate"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="make"
+                    id="make"
+                    placeholder="Enter vehicle make"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="model"
+                    id="model"
+                    placeholder="Enter vehicle model"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="color"
+                    id="color"
+                    placeholder="Enter vehicle color"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="features"
+                    id="features"
+                    placeholder="Enter other vehicle features"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="notes"
+                    id="notes"
+                    placeholder="Enter extra vehicle info or offenses"
+                    class="form-control mb-3"
+                    >
+                    <input type="submit" value="Add Vehicle" class="btn btn-outline-primary form-control rounded-0">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="container mt-5">
+            <div class="card" style="padding: 20px;">
+                <h1>Update Vehicle</h1>
+                <form #updateForm="ngForm" (ngSubmit)="update(updateForm)">
+                    <input type="text"
+                    ngModel
+                    name="numberPlate"
+                    id="numberPlate"
+                    placeholder="Enter vehicle number plate"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="make"
+                    id="make"
+                    placeholder="Enter vehicle make"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="model"
+                    id="model"
+                    placeholder="Enter vehicle model"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="color"
+                    id="color"
+                    placeholder="Enter vehicle color"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="features"
+                    id="features"
+                    placeholder="Enter other vehicle features"
+                    class="form-control mb-3"
+                    >
+                    <input type="text"
+                    ngModel
+                    name="notes"
+                    id="notes"
+                    placeholder="Enter extra vehicle info or offenses"
+                    class="form-control mb-3"
+                    >
+                    <input type="submit" value="Update Vehicle" class="btn btn-outline-primary form-control rounded-0">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="container mt-5">
+            <div class="card" style="padding: 20px;">
+                <h1>Delete Vehicle By Number Plate Registration</h1>
+                <form #searchForm="ngForm" (ngSubmit)="deleteByNumberPlate(searchForm)">
+                    <input type="text"
+                        ngModel
+                        name="userName"
+                        id="userName"
+                        placeholder="Enter username"
+                        class="form-control mb-3"
+                    >
+                    <input type="submit" value="Delete" class="btn btn-outline-primary form-control rounded-0">
+                </form>
+                <p></p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="card" style="padding: 20px;">
+        <input (click) ="getAll()" value="Refresh" class="btn btn-outline-primary form-control rounded-0">      
+                <table class="table table-striped" *ngIf="show">
+                    <thead>
+                        <tr>
+                            <th><h4>Number Plate Registration</h4></th>
+                            <th><h4>Make</h4></th>
+                            <th><h4>Model</h4></th>
+                            <th><h4>Color</h4></th>
+                            <th><h4>Features</h4></th>
+                            <th><h4>Notes</h4></th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let vehicle of vehicles" >
+                        <tr>
+                            <td><h6>{{vehicle.numberPlate}}</h6></td>
+                            <td><h6>{{vehicle.make}}</h6></td>
+                            <td><h6>{{vehicle.model}}</h6></td>
+                            <td><h6>{{vehicle.color}}</h6></td>
+                            <td><h6>{{vehicle.features}}</h6></td>
+                            <td><h6>{{vehicle.notes}}</h6></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+</div>

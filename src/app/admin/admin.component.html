@@ -1,0 +1,114 @@
+<div class="grid-container">
+    <div class="item1">
+        <h1>User Management</h1>
+    </div>
+    <div class="container mt-3" class="item2">
+        <h1>Known Users</h1>  
+        <input (click) ="getAll()" value="Refresh" class="btn btn-outline-primary form-control rounded-0">      
+        <table class="table table-striped" *ngIf="show">
+          <thead>
+            <tr>
+                <th><h4>First Name</h4></th>
+                <th><h4>Last Name</h4></th>
+                <th><h4>Username</h4></th>     
+            </tr>
+          </thead>
+          <tbody *ngFor="let user of users" >
+            <tr>
+              <td><h6>{{user.userFirstName}}</h6></td>
+              <td><h6>{{user.userLastName}}</h6></td>
+              <td><h6>{{user.userName}}</h6></td>             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <div class="container mt-5" class="item3">
+        <div class="card" style="padding: 20px;">
+            <h1>REGISTER</h1>
+            <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+                <input type="text"
+                ngModel
+                name="userName"
+                id="userName"
+                placeholder="Enter username"
+                class="form-control mb-3"
+                >
+                <input type="text" 
+                ngModel
+                name="userFirstName"
+                id="userFirstName"
+                placeholder="Enter first name"
+                class="form-control mb-3"
+                >
+                <input type="text" 
+                ngModel
+                name="userLastName"
+                id="userLastName"
+                placeholder="Enter last name"
+                class="form-control mb-3"
+                >
+                <input type="password" 
+                ngModel
+                name="userPassword"
+                id="userPassword"
+                placeholder="Enter your password"
+                class="form-control mb-3"
+                >
+                <input type="submit" value="Register" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+    </div>
+    <div class="container mt-5" class="item4">
+        <div class="card" style="padding: 20px;">
+            <h1>Search User By Their User Name</h1>
+            <form #searchForm="ngForm" (ngSubmit)="getById(searchForm)">
+                <input type="text"
+                ngModel
+                name="userName"
+                id="userName"
+                placeholder="Enter username"
+                class="form-control mb-3"
+                >
+                <input type="submit" value="Search" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+        <div class="container mt-3" class="item5">
+            <h2>Searched Entry</h2>            
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><h4>Firstname</h4></th>
+                  <th><h4>Lastname</h4></th>
+                  <th><h4>Role</h4></th>
+                  <th><h4>Username</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><h6>{{entry.userFirstName}}</h6></td>
+                  <td><h6>{{entry.userLastName}}</h6></td>
+                  <td><h6>{{entry.role[0].roleName}}</h6></td>
+                  <td><h6>{{entry.userName}}</h6></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+    <div class="container mt-5" class="item5">
+      <div class="card" style="padding: 20px;">
+          <h1>DELETE USER BY USERNAME</h1>
+          <form #searchForm="ngForm" (ngSubmit)="deleteById(searchForm)">
+              <input type="text"
+              ngModel
+              name="userName"
+              id="userName"
+              placeholder="Enter username"
+              class="form-control mb-3"
+              >
+              <input type="submit" value="Delete" class="btn btn-outline-primary form-control rounded-0">
+          </form>
+      </div>
+    </div>
+</div>
+
+
